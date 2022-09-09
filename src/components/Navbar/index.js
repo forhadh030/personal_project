@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaBars } from 'react-icons/fa';
-import { Nav, 
+import { 
+    Nav, 
     NavbarContainer, 
     NavLogo, MobileIcon, 
     NavMenu, 
@@ -9,14 +10,14 @@ import { Nav,
     NavBtn,
     NavBtnLink } from './NavbarElements';
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     // fragment = <> </>
     <>
         <Nav>
             <NavbarContainer>
                 <NavLogo to="/">dolla</NavLogo>
-                <MobileIcon>
+                <MobileIcon onClick={toggle}>
                     <FaBars />
                 </MobileIcon>
                 <NavMenu>
